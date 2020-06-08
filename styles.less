@@ -1,0 +1,203 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Muli', sans-serif;
+	text-decoration: none;
+	list-style-type: none;
+	color: #fff;
+	outline: 0px solid;
+	transition: 0.3s;
+}
+
+@color1: #726eff; //синий
+@color2: #5affe7; //белый
+@color3: #08c6ab; //аквамарин
+@color4: #37465b; //серый
+@color5: #212b38; //темно серый
+
+body {
+	background-color: @color5;
+}
+
+main {
+	margin-top: 50px;
+	width: 800px;
+	height: 600px;
+	background-color: @color3;
+	border-radius: 25px;
+	box-shadow: 3px 3px 10px @color3;
+	h1 {
+		padding-top: 30px;
+		font-size: 40px;
+		text-align: center;
+	}
+	.sign-up {
+		display: none;
+	}
+	.sign-people {
+		padding-top: 10px;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		width: 300px;
+		li:hover {
+			text-decoration: underline;
+		}
+	}
+	.registration-form {
+		margin-top: 20px;
+		width: 280px;
+		height: 380px;
+		border: 2px solid #fff;
+		border-radius: 25px;
+		padding: 20px;
+		label {
+			font-size: 20px;
+		}
+		input {
+			width: 100%;
+			height: 40px;
+			font-size: 20px;
+			color: #000;
+			margin-bottom: 10px;
+		}
+		button {
+			width: 150px;
+			height: 40px;
+			border: 1px solid;
+			background-color: @color3;
+			border-radius: 25px;
+			position: relative;
+			left: 65px;
+			top: 25px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #fff;
+			color: @color3;
+		}
+		button:active {
+			position: relative;
+			top: 26px;
+			left: 66px;
+		}
+		p {
+			position: relative;
+			top: 50px;
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+footer {
+	p {
+		text-align: center;
+		margin-top: 15px;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	main {
+		margin-top: 50px;
+		width: 600px;
+		height: 450px;
+		background-color: @color3;
+		border-radius: 25px;
+		box-shadow: 3px 3px 10px @color3;
+		h1 {
+			padding-top: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+		.sign-people {
+			padding-top: 10px;
+			display: grid;
+			grid-template-columns: 58% 42%;
+			width: 250px;
+			li:hover {
+				text-decoration: underline;
+			}
+			a {
+				font-size: 13px;
+			}
+		}
+		.registration-form {
+			margin-top: 15px;
+			width: 230px;
+			height: 280px;
+			border: 2px solid #fff;
+			border-radius: 25px;
+			padding: 20px;
+			label {
+				font-size: 15px;
+			}
+			input {
+				width: 100%;
+				height: 30px;
+				font-size: 15px;
+				color: #000;
+				margin-bottom: 10px;
+			}
+			button {
+				width: 120px;
+				height: 30px;
+				border: 1px solid;
+				background-color: @color3;
+				border-radius: 25px;
+				position: relative;
+				left: 60px;
+				top: 25px;
+				cursor: pointer;
+			}
+
+			button:active {
+				position: relative;
+				top: 26px;
+				left: 61px;
+			}
+			#button-registration {
+				position: relative;
+				top: 5px;
+			}
+			p {
+				position: relative;
+				font-size: 12px;
+				top: 50px;
+				a {
+					text-decoration: underline;
+				}
+			}
+
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	main {
+		width: 450px;
+		height: 450px;
+		.registration-form {
+
+			#button-registration {
+				position: relative;
+				top: 5px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	body {
+		background-color: @color3;
+	}
+	main {
+		width: 400px;
+		height: 450px;
+		margin-top: 0px;
+		border-radius: 0;
+	}
+	footer {
+		display: none;
+	}
+}
